@@ -1283,6 +1283,7 @@ MonoBehaviour:
   willRateus: 0
   isGuid: 0
   next_GuidType: 0
+  canShowOfferwall: 0
   _Tips: {fileID: 6405923251365969630}
   RewardType: 0
   RewardPanelType: 1

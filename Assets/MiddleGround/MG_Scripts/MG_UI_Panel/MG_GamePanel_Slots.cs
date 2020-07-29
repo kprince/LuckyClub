@@ -27,7 +27,7 @@ namespace MiddleGround.UI
         Sprite sp_LightA;
         Sprite sp_LightB;
         Sprite sp_spin;
-        Sprite sp_adSpin;
+        Sprite sp_moreGold;
         Sprite sp_adSpeedup;
 
         SpriteAtlas slotsSA;
@@ -49,8 +49,6 @@ namespace MiddleGround.UI
 
         const string mat_mainTex_Key = "_MainTex";
         float finalOffsetX = 0.25f;
-        const float offsetXA = 0.5f;
-        const float offsetXB = 0;
         protected override void Awake()
         {
             base.Awake();
@@ -66,7 +64,7 @@ namespace MiddleGround.UI
             finalOffsetX = 0;
             slotsSA = MG_UIManager.Instance.GetSpriteAtlas((int)MG_GamePanelType.SlotsPanel);
             sp_adSpeedup = slotsSA.GetSprite("MG_Sprite_Slots_Speedup");
-            sp_adSpin = slotsSA.GetSprite("MG_Sprite_Slots_AdSpin");
+            sp_moreGold = slotsSA.GetSprite("MG_Sprite_Slots_MoreCoins");
             sp_spin = slotsSA.GetSprite("MG_Sprite_Slots_Spin");
             sp_LightA = slotsSA.GetSprite("MG_Sprite_Slots_LightA");
             sp_LightB = slotsSA.GetSprite("MG_Sprite_Slots_LightB");
@@ -86,7 +84,8 @@ namespace MiddleGround.UI
             if (needAd)
             {
                 clickTime++;
-                MG_Manager.ShowRV(OnNoGoldAdCallback, clickTime,"slots adSpin");
+                //MG_Manager.ShowRV(OnNoGoldAdCallback, clickTime,"slots adSpin");
+                MG_UIManager.Instance.ShowPopPanelAsync(MG_PopPanelType.GetMoreGoldPanel);
                 return;
             }
             isSpining = true;
@@ -391,7 +390,7 @@ namespace MiddleGround.UI
             }
             else
             {
-                img_ButtonText.sprite = sp_adSpin;
+                img_ButtonText.sprite = sp_moreGold;
                 needAd = true;
             }
         }

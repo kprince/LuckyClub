@@ -30,6 +30,7 @@ namespace MiddleGround
         public bool willRateus = false;
         public bool isGuid = false;
         public MG_Guid_Type next_GuidType = MG_Guid_Type.Null;
+        public bool canShowOfferwall = false;
 
         MG_Config MG_Config;
         private void Awake()
@@ -915,7 +916,7 @@ namespace MiddleGround
                 ("other_str2", Get_Save_Fruits().ToString())
                 );
         }
-        public void SendFBAttributeEvent(string uri)
+        public void SendAdjustFBAttributeEvent(string uri)
         {
 #if UNITY_EDITOR
             return;
@@ -923,6 +924,32 @@ namespace MiddleGround
             AdjustEventLogger.Instance.AdjustEvent(AdjustEventLogger.TOKEN_deeplink,
                 ("link", uri),
                 ("order_id", uri)
+                );
+        }
+        public void SendAdjustOfferwallEvent(int downloadNum,int rewardGoldNum)
+        {
+#if UNITY_EDITOR
+            return;
+#endif
+            AdjustEventLogger.Instance.AdjustEvent(AdjustEventLogger.TOKEN_offerwall,
+                //累计美元
+                ("value", Get_Save_Cash().ToString()),
+                //累计金币
+                ("new_value", Get_Save_Gold().ToString()),
+                //总游戏次数
+                ("stage_id", Get_Save_TotalTimes().ToString()),
+                //本次打开offerwall下载完成次数
+                ("id", downloadNum.ToString()),
+                //本次打开offerwall获得的金币数
+                ("result",rewardGoldNum.ToString()),
+                //累计钻石
+                ("other_int1", Get_Save_Diamond().ToString()),
+                //累计777
+                ("other_int2", Get_Save_777().ToString()),
+                //累计亚马逊
+                ("other_str1", Get_Save_Amazon().ToString()),
+                //累计水果
+                ("other_str2", Get_Save_Fruits().ToString())
                 );
         }
 

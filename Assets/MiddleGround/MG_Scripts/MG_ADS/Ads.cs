@@ -97,6 +97,25 @@ public class Ads : MonoBehaviour
 			MG_Manager.Instance.SendAdjustPlayAdEvent(false, false, adDes);
 		}
 	}
+	public bool ShowOfferwallAd()
+    {
+#if UNITY_EDITOR
+		Debug.Log("Show OW.");
+		return true;
+#endif
+		//if (!MG_Manager.Instance.Get_Save_PackB())
+		//	return true;
+        if (IronSource.Agent.isOfferwallAvailable())
+        {
+			IronSource.Agent.showOfferwall();
+			return true;
+        }
+		return false;
+	}
+	public bool CheckOfferwall()
+    {
+		return IronSource.Agent.isOfferwallAvailable();
+    }
 	void OnApplicationPause(bool isPaused)
 	{
 		IronSource.Agent.onApplicationPause(isPaused);

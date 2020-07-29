@@ -19,6 +19,7 @@ namespace MiddleGround.UI
         public Button btn_Gold;
         public Button btn_Cash;
         public Button btn_SpecialToken;
+        public Button btn_Free;
 
         public Text text_Gold;
         public Text text_Cash;
@@ -70,6 +71,7 @@ namespace MiddleGround.UI
             btn_Gold.onClick.AddListener(OnGoldButtonClick);
             btn_Cash.onClick.AddListener(OnCashButtonClick);
             btn_SpecialToken.onClick.AddListener(OnSpecialButtonClick);
+            btn_Free.onClick.AddListener(OnFreeButtonClick);
             trans_guidMask.GetComponent<Button>().onClick.AddListener(OnMaskButtonClick);
 
 
@@ -115,6 +117,12 @@ namespace MiddleGround.UI
             go_scratchRP.SetActive(false);
         }
         bool packB = false;
+        void OnFreeButtonClick()
+        {
+            MG_Manager.Play_ButtonClick();
+            if (!MG_Manager.Instance.canChangeGame) return;
+            MG_UIManager.Instance.ShowPopPanelAsync(MG_PopPanelType.OfferwallPanel);
+        }
         void OnSettingButtonClick()
         {
             MG_Manager.Play_ButtonClick();

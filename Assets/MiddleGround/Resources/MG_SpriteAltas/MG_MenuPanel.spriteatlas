@@ -55,7 +55,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: e5fccc039d1d8074ea92a3c4fe5150f6, type: 3}
-    totalSpriteSurfaceArea: 519625
+    totalSpriteSurfaceArea: 530029
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -63,6 +63,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 14cc2960944b71c438c1f237756f6b57, type: 3}
   - {fileID: 21300000, guid: 59746e6087c023d48ad9dc5ed9e96c98, type: 3}
   - {fileID: 21300000, guid: 6fd8e8b0ba51d704cb81fbf3fa09050c, type: 3}
+  - {fileID: 21300000, guid: 7ccbdbf03b59efb468680187dca51182, type: 3}
   - {fileID: 21300000, guid: 8105e3913bda49243abb1a606a91bec7, type: 3}
   - {fileID: 21300000, guid: 9985c842e3eb429488932e68c9ff57ee, type: 3}
   - {fileID: 21300000, guid: da33d4b2b36c02349a186e8d041fdc26, type: 3}
@@ -91,6 +92,7 @@ SpriteAtlas:
   - MG_Sprite_Menu_Guid_Amazon
   - MG_Sprite_Menu_ScratchToken
   - MG_Sprite_Menu_DiceToken
+  - MG_Sprite_Menu_Free
   - MG_Sprite_Menu_Gold
   - MG_Sprite_Menu_Setting
   - MG_Sprite_Menu_SlotsOn

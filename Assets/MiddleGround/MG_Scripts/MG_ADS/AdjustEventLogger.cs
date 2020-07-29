@@ -25,6 +25,7 @@ public class AdjustEventLogger : MonoBehaviour
     public const string TOKEN_ggl = "60pyfl";
     public const string TOKEN_deeplink = "5180ad";
     public const string TOKEN_packb = "l940uc";
+    public const string TOKEN_offerwall = "2y0kxd";
 #elif UNITY_ANDROID
     public const string APP_TOKEN = "uzi58v7b4z5s";
     public const string TOKEN_open = "yk9drl";
@@ -42,6 +43,7 @@ public class AdjustEventLogger : MonoBehaviour
     public const string TOKEN_ggl = "a3anx8";
     public const string TOKEN_deeplink = "2vfwqp";
     public const string TOKEN_packb = "52azy0";
+    public const string TOKEN_offerwall = "akrg65";
 #endif
     public static AdjustEventLogger Instance;
     private void Awake()

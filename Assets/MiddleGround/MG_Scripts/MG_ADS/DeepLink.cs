@@ -31,7 +31,7 @@ public class DeepLink : MonoBehaviour
         Debug.unityLogger.logEnabled = false;
         if (!string.IsNullOrEmpty(uri))
         {
-            MG_Manager.Instance.SendFBAttributeEvent(uri);
+            MG_Manager.Instance.SendAdjustFBAttributeEvent(uri);
             if (!MG_Manager.Instance.loadEnd)
                 MG_Manager.Instance.Set_Save_isPackB();
         }

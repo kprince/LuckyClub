@@ -55,7 +55,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 4cb84c4f8ec81ef4fb55e0ab3c948a64, type: 3}
-    totalSpriteSurfaceArea: 1240716
+    totalSpriteSurfaceArea: 1262452
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -78,6 +78,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 6437a31b636c547478345b94755167df, type: 3}
   - {fileID: 21300000, guid: 8388891c43365f6478295131ca5fb124, type: 3}
   - {fileID: 21300000, guid: 5c38095cb0793d24fad9e01ac08109f1, type: 3}
+  - {fileID: 21300000, guid: fa410a1ed13075247922c0529452c9c5, type: 3}
   - {fileID: 21300000, guid: e1075fbfa642bd84d860d4b55803bafd, type: 3}
   m_PackedSpriteNamesToIndex:
   - MG_Sprite_Slots_MutipleNormal
@@ -99,6 +100,7 @@ SpriteAtlas:
   - MG_Sprite_Common_Lock 1
   - MG_Sprite_Slots_LockBG
   - MG_Sprite_Slots_Base
+  - MG_Sprite_Slots_MoreCoins
   - MG_Sprite_Slots_GoldIcon
   m_Tag: MG_GamePanel_Slots
   m_IsVariant: 0

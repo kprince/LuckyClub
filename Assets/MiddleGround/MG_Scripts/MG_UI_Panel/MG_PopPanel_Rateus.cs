@@ -29,7 +29,7 @@ namespace MiddleGround.UI
 #elif UNITY_IOS
         var url = string.Format(
            "itms-apps://itunes.apple.com/cn/app/id{0}?mt=8&action=write-review",
-           "");
+           "1525320032");
         Application.OpenURL(url);
 #endif
             MG_UIManager.Instance.ClosePopPanelAsync(MG_PopPanelType.Rateus);

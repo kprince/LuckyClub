@@ -27,6 +27,8 @@ namespace MiddleGround.UI
             {(int)MG_PopPanelType.MostRewardPanel,"MG_Prefabs/MG_PopPanels/MG_PopPanel_Reward" },
             {(int)MG_PopPanelType.CashRewardPanel,"MG_Prefabs/MG_PopPanels/MG_PopPanel_CashReward" },
             {(int)MG_PopPanelType.GiftPanel,"MG_Prefabs/MG_PopPanels/MG_PopPanel_Gift" },
+            {(int)MG_PopPanelType.GetMoreGoldPanel,"MG_Prefabs/MG_PopPanels/MG_PopPanel_GetMoreGold"},
+            {(int)MG_PopPanelType.OfferwallPanel,"MG_Prefabs/MG_PopPanels/MG_PopPanel_Offerwall" },
         };
         readonly Dictionary<int, MG_UIBase> LoadedPanel_Dic = new Dictionary<int, MG_UIBase>();
 
@@ -539,6 +541,8 @@ namespace MiddleGround.UI
         MostRewardPanel = 14,
         CashRewardPanel = 15,
         GiftPanel = 16,
+        GetMoreGoldPanel = 17,
+        OfferwallPanel = 18,
     }
     public enum MG_GamePanelType
     {
