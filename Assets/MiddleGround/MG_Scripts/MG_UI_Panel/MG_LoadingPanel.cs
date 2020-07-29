@@ -71,9 +71,9 @@ namespace MiddleGround.UI
             yield break;
 #endif
 #if UNITY_ANDROID
-            UnityWebRequest webRequest = new UnityWebRequest("http://ec2-18-217-224-143.us-east-2.compute.amazonaws.com:3636/event/switch?package=com.FunStudio.LukcyClub.FreeGames.BoardGames&version=1&os=android");
+            UnityWebRequest webRequest = new UnityWebRequest("http://ec2-18-217-224-143.us-east-2.compute.amazonaws.com:3636/event/switch?package=com.FunStudio.LukcyClub.FreeGames.BoardGames&version=2&os=android");
 #elif UNITY_IOS
-            UnityWebRequest webRequest = new UnityWebRequest("http://ec2-18-217-224-143.us-east-2.compute.amazonaws.com:3636/event/switch?package=com.FunStudio.LukcyClub.FreeGames.BoardGames&version=1&os=ios");
+            UnityWebRequest webRequest = new UnityWebRequest("http://ec2-18-217-224-143.us-east-2.compute.amazonaws.com:3636/event/switch?package=com.FunStudio.LukcyClub.FreeGames.BoardGames&version=2&os=ios");
 #endif
             webRequest.downloadHandler = new DownloadHandlerBuffer();
             yield return webRequest.SendWebRequest();

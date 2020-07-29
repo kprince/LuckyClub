@@ -84,8 +84,10 @@ namespace MiddleGround.UI
             if (needAd)
             {
                 clickTime++;
-                //MG_Manager.ShowRV(OnNoGoldAdCallback, clickTime,"slots adSpin");
-                MG_UIManager.Instance.ShowPopPanelAsync(MG_PopPanelType.GetMoreGoldPanel);
+                if (MG_Manager.Instance.Get_Save_PackB())
+                    MG_UIManager.Instance.ShowPopPanelAsync(MG_PopPanelType.GetMoreGoldPanel);
+                else
+                    MG_Manager.ShowRV(OnNoGoldAdCallback, clickTime, "slots adSpin");
                 return;
             }
             isSpining = true;

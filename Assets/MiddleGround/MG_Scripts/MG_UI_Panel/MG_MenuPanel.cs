@@ -104,6 +104,7 @@ namespace MiddleGround.UI
             go_cashoutTips_cash.SetActive(packB);
             go_cashoutTips_special.SetActive(packB);
             btn_shop.gameObject.SetActive(packB);
+            btn_Free.gameObject.SetActive(packB);
 
             dic_flytarget_transform.Add((int)MG_MenuFlyTarget.OneGold, btn_Gold.transform);
             dic_flytarget_transform.Add((int)MG_MenuFlyTarget.Cash, btn_Cash.transform);

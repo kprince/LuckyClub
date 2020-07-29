@@ -103,8 +103,8 @@ public class Ads : MonoBehaviour
 		Debug.Log("Show OW.");
 		return true;
 #endif
-		//if (!MG_Manager.Instance.Get_Save_PackB())
-		//	return true;
+        if (!MG_Manager.Instance.Get_Save_PackB())
+            return true;
         if (IronSource.Agent.isOfferwallAvailable())
         {
 			IronSource.Agent.showOfferwall();
